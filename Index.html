@@ -1,0 +1,37 @@
+<html>
+
+<head>
+	<!-- <link href="./iti.css" type="text/css" rel="stylesheet"/>  -->
+	<link href="iti.css" type="text/css" rel="stylesheet" />
+	<style>
+		.iti {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<button onclick="addControl()"> Add Control</button>
+
+	<div class="iti"></div>
+	<div style="height: 100px"></div>
+
+	<script src="./jquery.min.js"></script>
+	<script src="./jQuery.iti.js"></script>
+	<script>
+		$(function () {
+			$(".iti").iti();
+
+		});
+
+		var index = 0;
+		function addControl() {
+			var id = "iti" + index;
+			$("body").append("<div class=" + id + "></div>");
+			$("." + id).iti();
+			index += 1;
+		}
+	</script>
+</body>
+
+</html>
